@@ -1,0 +1,338 @@
+* {
+    /*set all margins and paddings to 0 to start*/
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:rgb(240, 240, 240); /*grey background*/
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: regular;
+    color:rgb(20, 20, 20); /*dark grey text color*/
+
+}
+
+nav {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: auto;
+    background: rgba(41, 58, 41, 0.097); /*light grey background*/
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline; /*align nav items horizontally*/
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /*remove hyperlink underlines*/
+    color:rgb(21, 21, 45);
+    font-size: 25px;
+}
+
+/*style the first list item*/
+nav :first-child {
+    font-size: larger;
+    font-weight: bold;
+}
+
+/*style hover state*/
+nav ul li :hover {
+    background: rgba(41, 58, 41, 0.452); /*dark grey background*/
+    border-radius: 9px; /*curve corners*/
+}
+
+/*style javascript button*/
+#themebutton {
+  position: absolute;
+  top: 10px; /*situate button 10 pixels from top of page*/
+  left: 1300px; /*situate button 1300 pixels left*/
+  background: rgb(157, 165, 157); /*light grey background*/
+  color: rgb(20,20,20); /*dark grey text*/
+  border-radius: 10px; /*round the corners*/
+  padding: 8px;
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+}
+
+.header {
+    font-family: "Tiny5", Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    color:rgb(21, 21, 45); /*navy text*/
+    display: flex;
+    justify-content: left;
+    width: 1024%;
+    height: 768%;
+    padding: 60px;
+    margin: 0 0 0 8;
+    border-bottom: 1px solid rgba(39, 43, 39, 0.37); /*slight green border @ 37% opacity*/
+    box-shadow: 0 0 0 4px rgba(41, 58, 41, 0.097); /*green-grey shadow @ bottom*/
+    background: url(alttp.jpg) no-repeat; /*set bg image w/o repeat*/
+    background-size: 100%;
+}
+
+/*style images on home page*/
+.column {
+    flex: 0.50%; /*split space equally between two pictures*/
+    flex-flow: column;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*style image containers on home page*/
+.pic-rows {
+    display: flex;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid rgba(41, 58, 41, 0.288); /*light grey border*/
+    box-shadow: 2px rgba(21, 45, 29, 0.258); /*light grey box shadow*/
+    justify-content: left;
+    align-content: baseline;
+}
+
+.pic-rows img {
+    object-fit: contain;
+}
+
+/*styles for home page bio*/
+.bio {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid rgba(41, 58, 41, 0.288); /*light gray border*/
+    box-shadow: 2px rgba(21, 45, 29, 0.258); /*light grey box shadow*/
+}
+
+.bio p {
+    padding-left: 16px;
+}
+
+/*style hobbies and favorites list items on home page*/
+.hobbies ul, .favorites ul {
+    list-style-type: square; /*square bullets*/
+    padding-top: 8px;
+}
+
+/*styles for hobbies and favorites on home page*/
+.hobbies, .favorites {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: left;
+    flex: 0 1 50%;
+    margin: 8px;
+    padding: 30px;
+    border: 1px solid rgba(41, 58, 41, 0.288); /*light grey border*/
+}
+
+/*style for bio on about me page*/
+.about-bio {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 50%; /*set bio to take up 50% of screen space*/
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+    margin: 8px;
+}
+
+.about-bio h2 {
+    padding: 8px;
+    font-size: 200%;
+    line-height: auto;
+}
+
+.about-bio p {
+    padding-left: 12px; /*indent content*/
+    font-size: 100%;
+}
+
+/*styles for the profile card on about me page*/
+.profile-card {
+    background: rgb(200, 208, 211); /*light grey background*/
+    box-shadow: inset 5px 1px 1px 5px rgb(62, 64, 66); /*box shadow within profile card*/
+    width: 350px;
+    height: 400px;
+    text-wrap: wrap;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    flex: 0 0 25%; /*profile card takes up 25% of screen space*/
+    padding: 0px;
+    margin: 8px;
+}
+
+/*profile card image styling*/
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /*make borders circular*/
+    /*center image using margins*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card h3 {
+    font-size: 150%;
+}
+
+/*styles for hobbies page*/
+.hobbies-hobbies {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+    margin: 8px;
+}
+
+.hobbies-hobbies h2 {
+    font-size: 200%;
+    padding: 0px 12px;
+    align-content: flex-start;
+}
+
+.hobbies-hobbies ul {
+    font-size: 100%;
+    padding-left: 24px;
+    list-style-type: square; /*turn bullets square*/
+}
+
+/*styles for favorites page*/
+.favorites-favorites {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+    margin: 8px;
+}
+
+.favorites-favorites h2 {
+    font-size: 200%;
+    padding: 0px 12px;
+    align-content: flex-start;
+}
+
+.favorites-favorites ul {
+    font-size: 100%;
+    padding-left: 24px;
+    list-style-type: square; /*turn bullets square*/
+}
+
+/*styling for pic page*/
+.pic-column {
+    display: flex;
+    display: inline-block;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.pic-rows-pic {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    align-content: baseline;
+}
+
+.pic-rows-pic img {
+    object-fit: contain;
+    flex: 0 1 50%;
+}
+
+.pic-rows-pic h2 {
+    font-size: 200%;
+    line-height: auto;
+    padding: 24px;
+}
+
+/*general dark theme formatting*/
+.darktheme {
+    background: rgb(60, 60, 67);
+    color: rgb(255,255,255); /*white body font in dark mode*/
+}
+
+.darktheme h1, .darktheme h2 {
+    color: rgb(237, 123, 0); /*orange font for headings in dark mode*/
+}
+
+.darktheme .header {
+    background: rgb(29, 29, 32); /*dark grey header background*/
+}
+
+.darktheme .bio, .darktheme .favorites, .darktheme .hobbies, .darktheme .pic-rows {
+    border: 1px solid rgb(208, 208, 208);
+}
+
+.darktheme nav ul li a {
+    color: rgb(255,255,255);
+}
+
+.darktheme nav {
+    background: rgb(29, 29, 32); /*dark grey header background*/
+}
+
+.darktheme nav ul li :hover {
+    background: rgb(0, 0, 0); /*dark grey background*/
+}
+
+/*style button in dark mode*/
+.darktheme #themebutton{
+    background: rgb(157, 165, 157);
+    color: rgb(103, 55, 4); 
+}
+
+/*dark theme styles for profile card*/
+.darktheme .profile-card {
+    background: rgb(29, 29, 32); /*dark grey background*/
+}
+
+.darktheme h3 , .darktheme h4, .darktheme h5 {
+    color: rgb(237, 123, 0); /*orange font color for headings*/
+}
+
+/*change styles for smaller screens*/
+@media  screen and (max-width: 768px) {
+    .header {
+        justify-content: center;
+        flex-flow: wrap;
+        padding: 20px;
+        background: rgb(202, 202, 202); /*light grey background*/
+    }
+
+    .pic-rows {
+        flex-shrink: auto;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 2px;
+    }
+
+    #themebutton {
+        position: relative;
+    }
+
+    nav {
+        text-wrap: nowrap;
+        width: 50vw;
+        height: 50vh;
+        display: inline-flex;
+        flex-shrink: auto;
+        font-size: 100%;
+    }
+
+}
